@@ -1,5 +1,5 @@
 /**
- * @file binary_arithmetic.h
+ * @file binary_arithmetic.hpp
  * @brief Part of the CS-230-003 Study Guide.
  *
  * @date August 26th, 2024

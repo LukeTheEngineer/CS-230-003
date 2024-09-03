@@ -38,14 +38,18 @@
 #include "../binary_arithmetic.hpp"
 #include <stdio.h>
 
-int main(void)
+int main(int argc, char *argv[])
 {
-    const char *binary_num = "11011";
+    const char *binary_num = argv[1];
     const char *original_num = binary_num;
-
+    if (argv[1] == NULL)
+    {
+        printf("Usage: <program><input>\n\n");
+        return -0x1;
+    }
     int64_t result = binary_to_decimal(binary_num);
 
-    printf("Binary number: %s\n Decimal: %lld\n", original_num, result);
+    printf("Binary number: %s\nDecimal: %lld\n", original_num, result);
 
-    return 0;
+    return 0x00;
 }
